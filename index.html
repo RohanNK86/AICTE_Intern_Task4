@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rohan N Karadigudd | Portfolio</title>
+    <meta name="description"
+        content="Personal portfolio of Rohan N Karadigudd – Computer Science student specializing in AI/ML, full-stack development, and intelligent systems.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <!-- Animated Background -->
+    <div id="programming-bg"></div>
+    <div class="bg-orbs">
+        <div class="orb orb-1"></div>
+        <div class="orb orb-2"></div>
+        <div class="orb orb-3"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav id="mainNav">
+        <div class="nav-content">
+            <div class="logo">
+                <a href="#home"><span class="logo-bracket">&lt;</span>RNK<span class="logo-bracket">/&gt;</span></a>
+            </div>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#todo" class="nav-link">To-Do</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button id="darkModeToggle" title="Toggle theme" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Available for Opportunities
+            </div>
+            <h1>Hi, I'm <span id="typed-name"></span><span class="cursor">|</span></h1>
+            <h2 class="hero-subtitle">Computer Science Student &amp; <span class="highlight">AI/ML Enthusiast</span>
+            </h2>
+            <p class="hero-desc">Passionate about building intelligent systems and solving complex problems through
+                code. Specializing in Machine Learning, Full-Stack Development, and creating impactful software
+                solutions.</p>
+            <div class="hero-actions">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+            <div class="hero-socials">
+                <a href="https://github.com/rohannk86" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/rohan-n-karadigudd-b51a58327" target="_blank" title="LinkedIn"><i
+                        class="fab fa-linkedin"></i></a>
+                <a href="mailto:rohankaradigudd@gmail.com" title="Email"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="profile-ring">
+                <div class="profile-avatar">
+                    <span>RNK</span>
+                </div>
+                <div class="ring-orbit">
+                    <div class="orbit-dot dot-1"><i class="fab fa-python"></i></div>
+                    <div class="orbit-dot dot-2"><i class="fab fa-java"></i></div>
+                    <div class="orbit-dot dot-3"><i class="fas fa-brain"></i></div>
+                    <div class="orbit-dot dot-4"><i class="fab fa-js"></i></div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-line"></div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Who I Am</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-text glass-card">
+                    <p>I'm a <strong>Computer Science student</strong> specializing in Artificial Intelligence and
+                        Machine Learning. I love turning complex problems into elegant code, and I'm always eager to
+                        learn new technologies.</p>
+                    <p>My academic journey has built a strong foundation in algorithms, data structures, and modern ML
+                        frameworks. I enjoy working across the full stack — from crafting neural networks in Python to
+                        building beautiful web interfaces.</p>
+                    <ul class="about-highlights">
+                        <li><i class="fas fa-check-circle"></i> Machine Learning &amp; Deep Learning</li>
+                        <li><i class="fas fa-check-circle"></i> Full-Stack Web Development</li>
+                        <li><i class="fas fa-check-circle"></i> Data Analysis &amp; Visualization</li>
+                        <li><i class="fas fa-check-circle"></i> Problem Solving &amp; DSA</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="fas fa-code"></i></div>
+                        <div class="stat-num" id="repoCount">—</div>
+                        <div class="stat-label">Repositories</div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="fas fa-users"></i></div>
+                        <div class="stat-num" id="followerCount">—</div>
+                        <div class="stat-label">GitHub Followers</div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                        <div class="stat-num">3+</div>
+                        <div class="stat-label">Key Projects</div>
+                    </div>
+                    <div class="stat-card glass-card">
+                        <div class="stat-icon"><i class="fas fa-graduation-cap"></i></div>
+                        <div class="stat-num">CS</div>
+                        <div class="stat-label">Pursuing B.E.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Know</span>
+                <h2 class="section-title">Skills &amp; Technologies</h2>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category glass-card">
+                    <div class="skill-cat-header">
+                        <i class="fas fa-code"></i>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-tag"><i class="fab fa-python"></i> Python</span>
+                        <span class="skill-tag"><i class="fab fa-java"></i> Java</span>
+                        <span class="skill-tag">C</span>
+                        <span class="skill-tag"><i class="fab fa-html5"></i> HTML</span>
+                        <span class="skill-tag"><i class="fab fa-css3-alt"></i> CSS</span>
+                        <span class="skill-tag"><i class="fab fa-js"></i> JavaScript</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <div class="skill-cat-header">
+                        <i class="fas fa-brain"></i>
+                        <h3>AI / ML</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-tag">Machine Learning</span>
+                        <span class="skill-tag">Deep Learning</span>
+                        <span class="skill-tag">Scikit-learn</span>
+                        <span class="skill-tag">Jupyter Notebook</span>
+                        <span class="skill-tag">MERN Stack</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <div class="skill-cat-header">
+                        <i class="fas fa-server"></i>
+                        <h3>Backend &amp; DB</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-tag"><i class="fab fa-node-js"></i> Node.js</span>
+                        <span class="skill-tag">Express.js</span>
+                        <span class="skill-tag"><i class="fas fa-database"></i> MySQL</span>
+                        <span class="skill-tag">MongoDB</span>
+                    </div>
+                </div>
+                <div class="skill-category glass-card">
+                    <div class="skill-cat-header">
+                        <i class="fas fa-tools"></i>
+                        <h3>Tools</h3>
+                    </div>
+                    <div class="skill-items">
+                        <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">IntelliJ IDEA</span>
+                        <span class="skill-tag">Figma</span>
+                        <span class="skill-tag">Cursor</span>
+                        <span class="skill-tag">AntiGravity</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I've Built</span>
+                <h2 class="section-title">Featured Projects</h2>
+            </div>
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <div class="project-card glass-card">
+                    <div class="project-icon"><i class="fas fa-robot"></i></div>
+                    <div class="project-tag-row">
+                        <span class="project-badge">AI / Chatbot</span>
+                    </div>
+                    <h3>Chat Bot using Gemini API</h3>
+                    <p>An intelligent conversational chatbot powered by Google's Gemini API. Features natural language
+                        understanding, context retention, and a clean responsive chat interface built with HTML, CSS,
+                        and JavaScript.</p>
+                    <div class="project-tech">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Gemini API</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/rohannk86" target="_blank" class="project-link"><i
+                                class="fab fa-github"></i> GitHub</a>
+                        <a href="#" class="project-link secondary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="project-card glass-card">
+                    <div class="project-icon"><i class="fas fa-wallet"></i></div>
+                    <div class="project-tag-row">
+                        <span class="project-badge">Web App</span>
+                    </div>
+                    <h3>Expense Tracker App</h3>
+                    <p>A feature-rich expense tracking application that helps users manage their finances. Supports
+                        categorization, monthly reports, visual charts, and persistent data storage using localStorage.
+                    </p>
+                    <div class="project-tech">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Chart.js</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/rohannk86" target="_blank" class="project-link"><i
+                                class="fab fa-github"></i> GitHub</a>
+                        <a href="#" class="project-link secondary"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="project-card glass-card">
+                    <div class="project-icon"><i class="fas fa-water"></i></div>
+                    <div class="project-tag-row">
+                        <span class="project-badge">ML / Analysis</span>
+                    </div>
+                    <h3>DWLR Water Level Analysis ML Model</h3>
+                    <p>A Machine Learning model for analyzing and predicting water levels using DWLR (Digital Water
+                        Level Recorder) sensor data. Uses regression techniques to forecast water levels and detect
+                        anomalies.</p>
+                    <div class="project-tech">
+                        <span>Python</span><span>Scikit-learn</span><span>Pandas</span><span>Matplotlib</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/rohannk86" target="_blank" class="project-link"><i
+                                class="fab fa-github"></i> GitHub</a>
+                        <a href="#" class="project-link secondary"><i class="fas fa-file-alt"></i> Report</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- To-Do Section (localStorage powered) -->
+    <section id="todo" class="todo-section section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Stay Organized</span>
+                <h2 class="section-title">My To-Do List</h2>
+                <p class="section-subtitle">Tasks are saved automatically in your browser using localStorage.</p>
+            </div>
+            <div class="todo-wrapper glass-card">
+                <div class="todo-input-row">
+                    <input type="text" id="todoInput" placeholder="Add a new task… (e.g. Study ML algorithms)"
+                        maxlength="120" autocomplete="off">
+                    <select id="todoPriority" title="Select priority">
+                        <option value="low">🟢 Low</option>
+                        <option value="medium" selected>🟡 Medium</option>
+                        <option value="high">🔴 High</option>
+                    </select>
+                    <button id="addTodoBtn" class="btn btn-primary"><i class="fas fa-plus"></i> Add</button>
+                </div>
+                <div class="todo-filters">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="pending">Pending</button>
+                    <button class="filter-btn" data-filter="completed">Completed</button>
+                    <button class="filter-btn" data-filter="high">🔴 High</button>
+                    <button class="filter-btn" data-filter="medium">🟡 Medium</button>
+                    <button class="filter-btn" data-filter="low">🟢 Low</button>
+                </div>
+                <div class="todo-stats-bar">
+                    <span id="todoStats">0 tasks total</span>
+                    <button id="clearCompleted" class="clear-btn"><i class="fas fa-trash-alt"></i> Clear
+                        Completed</button>
+                </div>
+                <ul id="todoList" class="todo-list">
+                    <!-- Tasks rendered by JS -->
+                </ul>
+                <div id="todoEmpty" class="todo-empty">
+                    <i class="fas fa-clipboard-list"></i>
+                    <p>No tasks here! Add one above.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Say Hello</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <p class="section-subtitle">I'm always open to discussing new projects, creative ideas, or opportunities
+                    to be part of something amazing.</p>
+            </div>
+            <div class="contact-grid">
+                <a href="mailto:rohankaradigudd@gmail.com" class="contact-card glass-card">
+                    <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                    <h3>Email</h3>
+                    <p>rohankaradigudd@gmail.com</p>
+                </a>
+                <a href="https://www.linkedin.com/in/rohan-n-karadigudd-b51a58327" target="_blank"
+                    class="contact-card glass-card">
+                    <div class="contact-icon"><i class="fab fa-linkedin"></i></div>
+                    <h3>LinkedIn</h3>
+                    <p>Rohan N Karadigudd</p>
+                </a>
+                <a href="https://github.com/rohannk86" target="_blank" class="contact-card glass-card">
+                    <div class="contact-icon"><i class="fab fa-github"></i></div>
+                    <h3>GitHub</h3>
+                    <p>@rohannk86</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-logo"><span class="logo-bracket">&lt;</span>RNK<span class="logo-bracket">/&gt;</span>
+            </div>
+            <p>Crafted with <span class="heart">❤</span> by Rohan N Karadigudd &copy; 2025</p>
+            <div class="footer-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#todo">To-Do</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Mini Game Modal (keeping the fun!) -->
+    <div id="gameModal" class="modal">
+        <div class="modal-content glass-card">
+            <span class="close" id="closeGame">&times;</span>
+            <h2><i class="fas fa-gamepad"></i> Mini Clicker Game</h2>
+            <p>Click the button as many times as you can in 10 seconds!</p>
+            <button id="startGame" class="btn btn-primary">Start Game</button>
+            <div id="gameArea" style="display:none;">
+                <button id="clickBtn" class="click-game-btn">Click Me!</button>
+                <p>Score: <span id="score">0</span> &nbsp;|&nbsp; Time: <span id="timeLeft">10</span>s</p>
+            </div>
+            <div id="gameResult" style="display:none;"></div>
+        </div>
+    </div>
+    <button id="openGame" title="Play Mini Game">🎮</button>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

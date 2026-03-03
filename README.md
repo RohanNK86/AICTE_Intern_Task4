@@ -1,4 +1,4 @@
-Glassmorphism
+#Glassmorphism
 Color palette: Deep dark #0f1117 base with purple #7c6bff and teal #06b6d4 accents
 Glass cards on all sections with backdrop-filter: blur(16px) and subtle borders
 Animated orbs in the background + code typing animation

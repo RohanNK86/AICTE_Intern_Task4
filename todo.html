@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-Do & Notes | Rohan's Apps</title>
+    <meta name="description" content="Smart To-Do and Notes app with localStorage persistence." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="todo.css" />
+</head>
+
+<body>
+    <!-- Navbar -->
+    <nav class="app-nav">
+        <a href="index.html" class="app-nav-back"><i class="fa-solid fa-arrow-left"></i> Portfolio</a>
+        <span class="app-nav-title"><i class="fa-solid fa-list-check"></i> To-Do &amp; Notes</span>
+        <div class="app-nav-stats" id="appStats">0 tasks</div>
+    </nav>
+
+    <main class="todo-main">
+        <!-- Sidebar / Controls -->
+        <aside class="todo-sidebar">
+            <div class="add-card">
+                <h3 class="add-card-title">Add New</h3>
+                <div class="form-row">
+                    <label>Type</label>
+                    <div class="type-toggle">
+                        <button class="type-btn active" data-type="task" id="typeTask"><i class="fa-solid fa-check"></i>
+                            Task</button>
+                        <button class="type-btn" data-type="note" id="typeNote"><i class="fa-solid fa-note-sticky"></i>
+                            Note</button>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <label for="inputTitle">Title</label>
+                    <input type="text" id="inputTitle" placeholder="What's on your mind?" maxlength="80" />
+                </div>
+                <div class="form-row" id="detailRow">
+                    <label for="inputDetail">Details <span class="optional">(optional)</span></label>
+                    <textarea id="inputDetail" rows="3" placeholder="Add more details..."></textarea>
+                </div>
+                <div class="form-row" id="categoryRow">
+                    <label for="inputCategory">Category</label>
+                    <select id="inputCategory">
+                        <option value="personal">🏠 Personal</option>
+                        <option value="work">💼 Work</option>
+                        <option value="study">📚 Study</option>
+                        <option value="health">💪 Health</option>
+                        <option value="other">📌 Other</option>
+                    </select>
+                </div>
+                <div class="form-row" id="priorityRow">
+                    <label>Priority</label>
+                    <div class="priority-group">
+                        <button class="priority-btn" data-priority="low">Low</button>
+                        <button class="priority-btn active" data-priority="medium">Medium</button>
+                        <button class="priority-btn" data-priority="high">High</button>
+                    </div>
+                </div>
+                <button class="add-btn" id="addBtn"><i class="fa-solid fa-plus"></i> Add</button>
+            </div>
+
+            <div class="filter-card">
+                <h3 class="add-card-title">Filter &amp; Sort</h3>
+                <div class="form-row">
+                    <label>Show</label>
+                    <select id="filterStatus">
+                        <option value="all">All</option>
+                        <option value="task">Tasks Only</option>
+                        <option value="note">Notes Only</option>
+                        <option value="active">Active Tasks</option>
+                        <option value="done">Completed</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Category</label>
+                    <select id="filterCategory">
+                        <option value="all">All Categories</option>
+                        <option value="personal">🏠 Personal</option>
+                        <option value="work">💼 Work</option>
+                        <option value="study">📚 Study</option>
+                        <option value="health">💪 Health</option>
+                        <option value="other">📌 Other</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Sort By</label>
+                    <select id="sortBy">
+                        <option value="newest">Newest First</option>
+                        <option value="oldest">Oldest First</option>
+                        <option value="priority">Priority (High→Low)</option>
+                        <option value="alpha">A → Z</option>
+                    </select>
+                </div>
+                <div class="form-row">
+                    <label>Search</label>
+                    <div class="search-wrap">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="searchInput" placeholder="Search items..." />
+                    </div>
+                </div>
+                <button class="clear-btn" id="clearCompleted"><i class="fa-solid fa-trash"></i> Clear Completed</button>
+            </div>
+        </aside>
+
+        <!-- Main List -->
+        <section class="todo-list-section">
+            <div class="list-header">
+                <h2 id="listTitle">All Items</h2>
+                <span class="result-count" id="resultCount">0 items</span>
+            </div>
+            <div class="todo-list" id="todoList">
+                <!-- Items rendered by JS -->
+            </div>
+            <div class="empty-state" id="emptyState">
+                <i class="fa-solid fa-clipboard"></i>
+                <p>Nothing here yet!</p>
+                <span>Add a task or note using the panel on the left.</span>
+            </div>
+        </section>
+    </main>
+
+    <script src="todo.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rohan N Karadigudd | Portfolio</title>
+    <meta name="description"
+        content="Personal portfolio of Rohan N Karadigudd – Full Stack Developer & ML Enthusiast." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <script type="module" src="https://unpkg.com/@splinetool/viewer@1.9.55/build/spline-viewer.js"></script>
+    <style>
+        .spline-background {
+            position: absolute;
+            inset: 0;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        spline-viewer {
+            width: 100%;
+            height: 100vh;
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: auto;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            pointer-events: auto;
+        }
+
+        .hero {
+            position: relative;
+            overflow: hidden;
+        }
+    </style>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <!-- ===== GLASSMORPHISM NAVBAR ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-logo">RNK</div>
+        <ul class="nav-links" id="navLinks">
+            <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+            <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+            <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+            <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+            <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+        </ul>
+        <div class="nav-extras">
+            <a href="todo.html" class="nav-app-btn"><i class="fa-solid fa-list-check"></i> To-Do</a>
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+                <i class="fa-solid fa-moon"></i>
+            </button>
+        </div>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="home">
+        <div class="spline-background">
+            <spline-viewer
+                url="https://prod.spline.design/3ded1099-6904-4f84-9c83-f9e5e51282fd/scene.splinecode"></spline-viewer>
+        </div>
+        <div class="hero-content">
+            <div class="hero-text">
+                <p class="hero-greeting">👋 Hello, World!</p>
+                <h1 class="hero-title">
+                    Hi, I am <span class="name-gradient" id="typedName"></span>
+                </h1>
+                <p class="hero-subtitle">
+                    <span id="roleTyped"></span><span class="cursor-blink">|</span>
+                </p>
+                <p class="hero-desc">
+                    A passionate developer who loves crafting modern web experiences, intelligent ML models, and sleek
+                    full-stack applications.
+                </p>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary">View My Work</a>
+                    <a href="#contact" class="btn btn-outline">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-side reveal delay-1">
+                <div class="hero-orbit">
+                    <div class="orbit-system">
+                        <div class="orbit-ring"></div>
+                        <div class="orbit-badge orbit-1"><span><i class="fa-brands fa-js"></i> JS</span></div>
+                        <div class="orbit-badge orbit-2"><span><i class="fa-brands fa-python"></i> PY</span></div>
+                        <div class="orbit-badge orbit-3"><span><i class="fa-brands fa-java"></i> JAVA</span></div>
+                        <div class="orbit-badge orbit-4"><span><i class="fa-solid fa-robot"></i> AI</span></div>
+                    </div>
+                    <div class="orbit-center">RNK</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-dot"></div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="about section" id="about">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Who Am I</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-left reveal">
+                    <div class="about-stats">
+                        <div class="stat-card"><span class="stat-num">3+</span><span class="stat-label">Projects</span>
+                        </div>
+                        <div class="stat-card"><span class="stat-num">10+</span><span class="stat-label">Skills</span>
+                        </div>
+                        <div class="stat-card"><span class="stat-num">2</span><span
+                                class="stat-label">Internships</span></div>
+                    </div>
+                </div>
+                <div class="about-right reveal delay-1">
+                    <h3 class="about-heading">Full Stack Developer &amp; ML Enthusiast</h3>
+                    <p class="about-text">
+                        I'm <strong>Rohan N Karadigudd</strong>, a developer with a deep interest in building scalable
+                        full-stack web applications and Training and building of Intelligent Machine learning models. I
+                        love turning
+                        complex problems into elegant, user-friendly solutions.
+                    </p>
+                    <p class="about-text">
+                        Currently exploring the intersection of AI and web development — from integrating Gemini API
+                        chatbots to building water analysis ML models. I believe great software is both powerful and
+                        beautifully designed.
+                    </p>
+                    <div class="about-info-grid">
+                        <div class="info-item"><i class="fa-solid fa-user-graduate"></i><span>Computer Science
+                                Student</span></div>
+                        <div class="info-item"><i class="fa-solid fa-location-dot"></i><span>India</span></div>
+                        <div class="info-item"><i class="fa-solid fa-code"></i><span>Full Stack Developer</span></div>
+                        <div class="info-item"><i class="fa-solid fa-robot"></i><span>AI&ML Enthusiast</span></div>
+                    </div>
+                    <a href="#contact" class="btn btn-primary mt-1">Let's Connect <i
+                            class="fa-solid fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="skills-section section" id="skills">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">What I Know</span>
+                <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+            </div>
+            <div class="skills-categories reveal">
+                <div class="skill-category">
+                    <h4 class="category-title"><i class="fa-solid fa-globe"></i> Frontend</h4>
+                    <div class="skills-grid">
+                        <div class="skill-chip"><i class="fa-brands fa-html5" style="color:#e34c26"></i> HTML5</div>
+                        <div class="skill-chip"><i class="fa-brands fa-css3-alt" style="color:#264de4"></i> CSS3</div>
+                        <div class="skill-chip"><i class="fa-brands fa-js" style="color:#f7df1e"></i> JavaScript</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4 class="category-title"><i class="fa-solid fa-server"></i> Backend</h4>
+                    <div class="skills-grid">
+                        <div class="skill-chip"><i class="fa-brands fa-node-js" style="color:#6db33f"></i> Node.js</div>
+                        <div class="skill-chip"><i class="fa-solid fa-e" style="color:#000"></i> Express.js</div>
+                        <div class="skill-chip"><i class="fa-brands fa-java" style="color:#b07219"></i> Java</div>
+                        <div class="skill-chip"><i class="fa-solid fa-c" style="color:#a8b9cc"></i> C</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4 class="category-title"><i class="fa-solid fa-database"></i> Databases</h4>
+                    <div class="skills-grid">
+                        <div class="skill-chip"><i class="fa-solid fa-database" style="color:#00758f"></i> MySQL</div>
+                        <div class="skill-chip"><i class="fa-solid fa-leaf" style="color:#47a248"></i> MongoDB</div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h4 class="category-title"><i class="fa-solid fa-wand-magic-sparkles"></i> ML / Data</h4>
+                    <div class="skills-grid">
+                        <div class="skill-chip"><i class="fa-brands fa-python" style="color:#3572A5"></i> Python</div>
+                        <div class="skill-chip"><i class="fa-solid fa-book-open" style="color:#f37726"></i> Jupyter
+                            </div>
+                        </div>
+                    </div>
+                    <div class="skill-category">
+                        <h4 class="category-title"><i class="fa-solid fa-toolbox"></i> Tools</h4>
+                        <div class="skills-grid">
+                            <div class="skill-chip"><i class="fa-brands fa-github" style="color:#fff"></i> GitHub</div>
+                            <div class="skill-chip"><i class="fa-solid fa-terminal" style="color:#8bc34a"></i> Git</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section class="projects-section section" id="projects">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">What I've Built</span>
+                <h2 class="section-title">My <span class="gradient-text">Projects</span></h2>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Project 1: Chatbot -->
+                <div class="project-card reveal">
+                    <div class="project-card-header" style="background: linear-gradient(135deg,#4285F4,#34A853)">
+                        <i class="fa-solid fa-robot project-icon"></i>
+                        <div class="project-badge">AI / API</div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Chatbot using Gemini API</h3>
+                        <p class="project-desc">
+                            A conversational AI chatbot powered by Google's Gemini API. Supports multi-turn
+                            conversations, context retention, and real-time response streaming directly in the browser.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Gemini API</span>
+                            <span class="tech-tag">HTML/CSS</span>
+                            <span class="tech-tag">REST API</span>
+                        </div>
+                        <div class="project-highlights">
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> Real-time AI responses
+                            </div>
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> Multi-turn context
+                                memory</div>
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> Clean chat UI</div>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="#" class="project-link-btn"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="#" class="project-link-btn primary"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Expense Tracker -->
+                <div class="project-card reveal delay-1">
+                    <div class="project-card-header" style="background: linear-gradient(135deg,#ff6b6b,#ee5a24)">
+                        <i class="fa-solid fa-wallet project-icon"></i>
+                        <div class="project-badge">Finance</div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Expense Tracker App</h3>
+                        <p class="project-desc">
+                            A full-featured personal finance tracker that allows users to log, categorize, and visualize
+                            their income and expenses. Data is persisted locally and displayed via interactive charts.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Chart.js</span>
+                            <span class="tech-tag">LocalStorage</span>
+                        </div>
+                        <div class="project-highlights">
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> Category-based
+                                filtering</div>
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> Visual expense charts
+                            </div>
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> Local data persistence
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="#" class="project-link-btn"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="#" class="project-link-btn primary"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                    </div>
+                </div>
+
+                <!-- Project 3: DWLR Water Analysis -->
+                <div class="project-card reveal delay-2">
+                    <div class="project-card-header" style="background: linear-gradient(135deg,#0abde3,#1e3799)">
+                        <i class="fa-solid fa-droplet project-icon"></i>
+                        <div class="project-badge">ML / Data</div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">DWLR Water Analysis ML Model</h3>
+                        <p class="project-desc">
+                            A machine learning model for analyzing DWLR (Digital Water Level Recorder) sensor data.
+                            Predicts water level trends, detects anomalies, and generates reports for water resource
+                            management.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Scikit-learn</span>
+                            <span class="tech-tag">Pandas</span>
+                            <span class="tech-tag">Jupyter</span>
+                            <span class="tech-tag">Matplotlib</span>
+                        </div>
+                        <div class="project-highlights">
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> Anomaly detection</div>
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> Trend forecasting</div>
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> Data visualization
+                            </div>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="#" class="project-link-btn"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="#" class="project-link-btn primary"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                    </div>
+                </div>
+
+                <!-- Project 4: To-Do App -->
+                <div class="project-card reveal delay-1">
+                    <div class="project-card-header" style="background: linear-gradient(135deg,#a29bfe,#6c5ce7)">
+                        <i class="fa-solid fa-list-check project-icon"></i>
+                        <div class="project-badge">Productivity</div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">To-Do / Notes App</h3>
+                        <p class="project-desc">
+                            A sleek productivity app combining task management and note-taking with complete
+                            localStorage persistence. Filter, sort, and organize your tasks and notes efficiently.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">HTML</span>
+                            <span class="tech-tag">CSS</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">LocalStorage</span>
+                        </div>
+                        <div class="project-highlights">
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> Persistent localStorage
+                            </div>
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> Filter & sort</div>
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> Notes + tasks</div>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="todo.html" class="project-link-btn primary"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i> Open App</a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="contact-section section" id="contact">
+        <div class="container">
+            <div class="section-header reveal">
+                <span class="section-tag">Let's Talk</span>
+                <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info reveal">
+                    <h3>Let's build something amazing together</h3>
+                    <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your
+                        vision. Feel free to reach out!</p>
+                    <div class="contact-items">
+                        <a href="mailto:rohan@example.com" class="contact-item">
+                            <div class="contact-icon"><i class="fa-solid fa-envelope"></i></div>
+                            <div><strong>Email</strong><span>rohan@example.com</span></div>
+                        </a>
+                        <a href="#" class="contact-item">
+                            <div class="contact-icon"><i class="fa-brands fa-github"></i></div>
+                            <div><strong>GitHub</strong><span>github.com/rohankaradigudd</span></div>
+                        </a>
+                        <a href="#" class="contact-item">
+                            <div class="contact-icon"><i class="fa-brands fa-linkedin"></i></div>
+                            <div><strong>LinkedIn</strong><span>linkedin.com/in/rohankaradigudd</span></div>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form-wrap reveal delay-1">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" id="cName" placeholder="John Doe" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Email Address</label>
+                            <input type="email" id="cEmail" placeholder="john@example.com" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea id="cMessage" rows="5" placeholder="Let's collaborate on something cool..."
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary full-width">
+                            Send Message <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                        <div class="form-success" id="formSuccess">
+                            <i class="fa-solid fa-circle-check"></i> Message sent successfully!
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <p>Crafted with <span style="color:#ff6b6b">❤</span> by <strong>Rohan N Karadigudd</strong> · 2025</p>
+        <div class="footer-links">
+            <a href="todo.html">To-Do App</a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        // Three.js Cyberpunk Character Animation
+        const container = document.getElementById('canvas-container');
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
+        const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        renderer.setClearColor(0x000000, 0);
+        container.appendChild(renderer.domElement);
+
+        // Arrays for interactive elements
+        const comets = [];
+        const particles = [];
+        let cyberpunkMan = null;
+
+        // Cyberpunk Character Class
+        class CyberpunkMan {
+            constructor() {
+                this.group = new THREE.Group();
+                this.group.position.set(25, 0, 0); // Right side positioning
+
+                // Head
+                const headGeometry = new THREE.SphereGeometry(2, 32, 32);
+                const headMaterial = new THREE.MeshPhongMaterial({
+                    color: 0x2a2a2a,
+                    emissive: 0x00ffff,
+                    emissiveIntensity: 0.3,
+                    shininess: 100
+                });
+                this.head = new THREE.Mesh(headGeometry, headMaterial);
+                this.head.position.set(0, 8, 0);
+
+                // Cyberpunk visor/glasses
+                const visorGeometry = new THREE.BoxGeometry(3, 1, 1.5);
+                const visorMaterial = new THREE.MeshPhongMaterial({
+                    color: 0x00ffff,
+                    emissive: 0x00ffff,
+                    emissiveIntensity: 0.8,
+                    transparent: true,
+                    opacity: 0.8
+                });
+                this.visor = new THREE.Mesh(visorGeometry, visorMaterial);
+                this.visor.position.set(0, 8.5, 1);
+
+                // Body
+                const bodyGeometry = new THREE.BoxGeometry(4, 6, 2);
+                const bodyMaterial = new THREE.MeshPhongMaterial({
+                    color: 0x1a1a1a,
+                    emissive: 0xff00ff,
+                    emissiveIntensity: 0.2
+                });
+                this.body = new THREE.Mesh(bodyGeometry, bodyMaterial);
+                this.body.position.set(0, 2, 0);
+
+                // Arms
+                const armGeometry = new THREE.BoxGeometry(1, 5, 1);
+                const armMaterial = new THREE.MeshPhongMaterial({
+                    color: 0x2a2a2a,
+                    emissive: 0x00ff00,
+                    emissiveIntensity: 0.3
+                });
+
+                this.leftArm = new THREE.Mesh(armGeometry, armMaterial);
+                this.leftArm.position.set(-2.5, 3, 0);
+                this.leftArm.rotation.z = 0.3;
+
+                this.rightArm = new THREE.Mesh(armGeometry, armMaterial);
+                this.rightArm.position.set(2.5, 3, 0);
+                this.rightArm.rotation.z = -0.3;
+
+                // Legs
+                const legGeometry = new THREE.BoxGeometry(1.5, 6, 1.5);
+                const legMaterial = new THREE.MeshPhongMaterial({
+                    color: 0x1a1a1a,
+                    emissive: 0x00ffff,
+                    emissiveIntensity: 0.2
+                });
+
+                this.leftLeg = new THREE.Mesh(legGeometry, legMaterial);
+                this.leftLeg.position.set(-1, -4, 0);
+
+                this.rightLeg = new THREE.Mesh(legGeometry, legMaterial);
+                this.rightLeg.position.set(1, -4, 0);
+
+                // Cyberpunk enhancements
+                this.createCyberpunkEnhancements();
+
+                // Assemble character
+                this.group.add(this.head);
+                this.group.add(this.visor);
+                this.group.add(this.body);
+                this.group.add(this.leftArm);
+                this.group.add(this.rightArm);
+                this.group.add(this.leftLeg);
+                this.group.add(this.rightLeg);
+
+                scene.add(this.group);
+
+                // Animation properties
+                this.targetRotation = { x: 0, y: 0 };
+                this.currentRotation = { x: 0, y: 0 };
+            }
+
+            createCyberpunkEnhancements() {
+                // Glowing circuits on body
+                const circuitGeometry = new THREE.BoxGeometry(4.2, 6.2, 0.1);
+                const circuitMaterial = new THREE.MeshBasicMaterial({
+                    color: 0x00ffff,
+                    transparent: true,
+                    opacity: 0.6
+                });
+                this.circuits = new THREE.Mesh(circuitGeometry, circuitMaterial);
+                this.circuits.position.set(0, 2, 1.1);
+                this.group.add(this.circuits);
+
+                // Neon hair/spikes
+                for (let i = 0; i < 8; i++) {
+                    const spikeGeometry = new THREE.ConeGeometry(0.3, 2, 8);
+                    const spikeMaterial = new THREE.MeshPhongMaterial({
+                        color: new THREE.Color().setHSL(Math.random() * 0.3 + 0.5, 1, 0.5),
+                        emissive: new THREE.Color().setHSL(Math.random() * 0.3 + 0.5, 1, 0.3)
+                    });
+                    const spike = new THREE.Mesh(spikeGeometry, spikeMaterial);
+                    const angle = (i / 8) * Math.PI * 2;
+                    spike.position.set(Math.cos(angle) * 2, 10, Math.sin(angle) * 2);
+                    spike.rotation.z = -angle + Math.PI / 2;
+                    this.group.add(spike);
+                }
+
+                // Floating data particles around character
+                this.dataParticles = [];
+                for (let i = 0; i < 20; i++) {
+                    const particleGeometry = new THREE.SphereGeometry(0.1, 8, 8);
+                    const particleMaterial = new THREE.MeshBasicMaterial({
+                        color: 0x00ffff,
+                        transparent: true,
+                        opacity: 0.8
+                    });
+                    const particle = new THREE.Mesh(particleGeometry, particleMaterial);
+                    particle.position.set(
+                        (Math.random() - 0.5) * 8,
+                        Math.random() * 12 - 2,
+                        (Math.random() - 0.5) * 8
+                    );
+                    this.dataParticles.push({
+                        mesh: particle,
+                        velocity: {
+                            x: (Math.random() - 0.5) * 0.02,
+                            y: (Math.random() - 0.5) * 0.02,
+                            z: (Math.random() - 0.5) * 0.02
+                        }
+                    });
+                    this.group.add(particle);
+                }
+            }
+
+            update(mouseX, mouseY) {
+                // Smooth head rotation following cursor
+                this.targetRotation.x = mouseY * 0.3;
+                this.targetRotation.y = mouseX * 0.3;
+
+                // Smooth interpolation
+                this.currentRotation.x += (this.targetRotation.x - this.currentRotation.x) * 0.1;
+                this.currentRotation.y += (this.targetRotation.y - this.currentRotation.y) * 0.1;
+
+                // Apply rotation to head and visor
+                this.head.rotation.x = this.currentRotation.x;
+                this.head.rotation.y = this.currentRotation.y;
+                this.visor.rotation.x = this.currentRotation.x;
+                this.visor.rotation.y = this.currentRotation.y;
+
+                // Subtle body movement
+                const time = Date.now() * 0.001;
+                this.group.position.y = Math.sin(time) * 0.5;
+                this.group.rotation.z = Math.sin(time * 0.5) * 0.05;
+
+                // Animate data particles
+                this.dataParticles.forEach(particle => {
+                    particle.mesh.position.x += particle.velocity.x;
+                    particle.mesh.position.y += particle.velocity.y;
+                    particle.mesh.position.z += particle.velocity.z;
+
+                    // Reset particles that go too far
+                    const distance = particle.mesh.position.length();
+                    if (distance > 6) {
+                        particle.mesh.position.set(
+                            (Math.random() - 0.5) * 4,
+                            Math.random() * 8 - 2,
+                            (Math.random() - 0.5) * 4
+                        );
+                    }
+                });
+
+                // Pulsing circuits
+                this.circuits.material.opacity = 0.3 + Math.sin(time * 3) * 0.3;
+                this.visor.material.emissiveIntensity = 0.8 + Math.sin(time * 2) * 0.4;
+            }
+        }
+
+        // Enhanced Cyberpunk Comets
+        class CyberpunkComet {
+            constructor() {
+                this.reset();
+            }
+
+            reset() {
+                this.x = -50 - Math.random() * 20;
+                this.y = (Math.random() - 0.5) * 60;
+                this.z = (Math.random() - 0.5) * 40;
+                this.vx = 0.8 + Math.random() * 0.6;
+                this.vy = (Math.random() - 0.5) * 0.4;
+                this.vz = (Math.random() - 0.5) * 0.3;
+
+                const cometGeometry = new THREE.SphereGeometry(0.8, 16, 16);
+                const cometMaterial = new THREE.MeshPhongMaterial({
+                    color: 0xff00ff,
+                    emissive: 0x00ffff,
+                    emissiveIntensity: 1
+                });
+                this.mesh = new THREE.Mesh(cometGeometry, cometMaterial);
+
+                // Glowing trail
+                const trailCount = 8;
+                this.trails = [];
+                for (let i = 0; i < trailCount; i++) {
+                    const trailGeometry = new THREE.SphereGeometry(0.6 - i * 0.06, 8, 8);
+                    const trailMaterial = new THREE.MeshBasicMaterial({
+                        color: new THREE.Color().setHSL(0.5 + i * 0.1, 1, 0.6),
+                        transparent: true,
+                        opacity: 0.6 - i * 0.07,
+                        blending: THREE.AdditiveBlending
+                    });
+                    const trail = new THREE.Mesh(trailGeometry, trailMaterial);
+                    trail.position.z = -i * 2;
+                    this.trails.push(trail);
+                    this.mesh.add(trail);
+                }
+
+                scene.add(this.mesh);
+            }
+
+            update() {
+                this.x += this.vx;
+                this.y += this.vy;
+                this.z += this.vz;
+
+                this.mesh.position.set(this.x, this.y, this.z);
+                this.mesh.rotation.z = Math.atan2(this.vy, this.vx);
+
+                // Animate trails
+                this.trails.forEach((trail, i) => {
+                    trail.scale.setScalar(1 + Math.sin(Date.now() * 0.01 + i) * 0.2);
+                });
+
+                if (this.x > 60) {
+                    scene.remove(this.mesh);
+                    this.reset();
+                }
+            }
+        }
+
+        // Background cyberpunk grid
+        function createCyberpunkGrid() {
+            const gridSize = 100;
+            const gridDivisions = 50;
+
+            const gridHelper = new THREE.GridHelper(gridSize, gridDivisions, 0x00ffff, 0x0088ff);
+            gridHelper.position.y = -15;
+            gridHelper.material.opacity = 0.2;
+            gridHelper.material.transparent = true;
+            scene.add(gridHelper);
+
+            // Vertical grid planes
+            for (let i = 0; i < 5; i++) {
+                const planeGeometry = new THREE.PlaneGeometry(gridSize, gridSize);
+                const planeMaterial = new THREE.MeshBasicMaterial({
+                    color: 0x00ffff,
+                    transparent: true,
+                    opacity: 0.05,
+                    side: THREE.DoubleSide
+                });
+                const plane = new THREE.Mesh(planeGeometry, planeMaterial);
+                plane.position.z = (i - 2) * 20;
+                scene.add(plane);
+            }
+        }
+
+        // Floating particles
+        function createFloatingParticles() {
+            const particleCount = 500;
+            const positions = new Float32Array(particleCount * 3);
+            const colors = new Float32Array(particleCount * 3);
+
+            for (let i = 0; i < particleCount * 3; i += 3) {
+                positions[i] = (Math.random() - 0.5) * 200;
+                positions[i + 1] = (Math.random() - 0.5) * 200;
+                positions[i + 2] = (Math.random() - 0.5) * 200;
+
+                const hue = Math.random() * 0.3 + 0.5; // Cyan to magenta range
+                const color = new THREE.Color().setHSL(hue, 1, 0.6);
+                colors[i] = color.r;
+                colors[i + 1] = color.g;
+                colors[i + 2] = color.b;
+            }
+
+            const particleGeometry = new THREE.BufferGeometry();
+            particleGeometry.setAttribute('position', new THREE.BufferAttribute(positions, 3));
+            particleGeometry.setAttribute('color', new THREE.BufferAttribute(colors, 3));
+
+            const particleMaterial = new THREE.PointsMaterial({
+                size: 0.5,
+                vertexColors: true,
+                transparent: true,
+                opacity: 0.8,
+                blending: THREE.AdditiveBlending
+            });
+
+            const particles = new THREE.Points(particleGeometry, particleMaterial);
+            scene.add(particles);
+
+            return particles;
+        }
+
+        // Initialize scene
+        createCyberpunkGrid();
+        const floatingParticles = createFloatingParticles();
+        cyberpunkMan = new CyberpunkMan();
+
+        // Create cyberpunk comets
+        for (let i = 0; i < 10; i++) {
+            comets.push(new CyberpunkComet());
+        }
+
+        // Cyberpunk lighting
+        const ambientLight = new THREE.AmbientLight(0x00ffff, 0.1);
+        scene.add(ambientLight);
+
+        const neonLight1 = new THREE.PointLight(0xff00ff, 1, 100);
+        neonLight1.position.set(-20, 10, 20);
+        scene.add(neonLight1);
+
+        const neonLight2 = new THREE.PointLight(0x00ffff, 1, 100);
+        neonLight2.position.set(20, 10, -20);
+        scene.add(neonLight2);
+
+        const characterLight = new THREE.PointLight(0x00ffff, 0.5, 50);
+        characterLight.position.set(25, 5, 0);
+        scene.add(characterLight);
+
+        camera.position.z = 40;
+
+        // Mouse interaction
+        let mouseX = 0;
+        let mouseY = 0;
+
+        document.addEventListener('mousemove', (event) => {
+            mouseX = (event.clientX / window.innerWidth) * 2 - 1;
+            mouseY = -(event.clientY / window.innerHeight) * 2 + 1;
+        });
+
+        // Animation loop
+        function animate() {
+            requestAnimationFrame(animate);
+
+            // Update cyberpunk man
+            if (cyberpunkMan) {
+                cyberpunkMan.update(mouseX, mouseY);
+            }
+
+            // Update comets
+            comets.forEach(comet => comet.update());
+
+            // Animate floating particles
+            const time = Date.now() * 0.0005;
+            floatingParticles.rotation.y = time;
+            floatingParticles.rotation.x = time * 0.5;
+
+            // Camera parallax
+            camera.position.x = mouseX * 3;
+            camera.position.y = mouseY * 2;
+            camera.lookAt(scene.position);
+
+            renderer.render(scene, camera);
+        }
+
+        // Handle window resize
+        window.addEventListener('resize', () => {
+            camera.aspect = window.innerWidth / window.innerHeight;
+            camera.updateProjectionMatrix();
+            renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        animate();
+    </script>
+</body>
+
+</html>

@@ -41,11 +41,34 @@
             position: relative;
             overflow: hidden;
         }
+
+        #programming-bg {
+            position: fixed; /* Make it stay visible during scroll */
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            pointer-events: none;
+            z-index: 0; /* Keep it underneath the content */
+            overflow: hidden;
+            font-family: 'Fira Code', monospace;
+            font-size: 15px;
+            color: var(--accent-1); /* Using the new blue accent */
+            opacity: 0.15; /* Subdued opacity so content stays readable */
+            padding: 20px;
+        }
+
+        #programming-bg div {
+            position: absolute;
+            white-space: pre;
+            left: 20px;
+        }
     </style>
     <link rel="stylesheet" href="style.css" />
 </head>
 
 <body>
+    <div id="programming-bg"></div>
     <!-- ===== GLASSMORPHISM NAVBAR ===== -->
     <nav class="navbar" id="navbar">
         <div class="nav-logo">RNK</div>
@@ -347,6 +370,66 @@
                     </div>
                 </div>
 
+                <!-- Project 5: Co-DNA -->
+                <div class="project-card reveal delay-2">
+                    <div class="project-card-header" style="background: linear-gradient(135deg,#00b894,#00cec9)">
+                        <i class="fa-solid fa-puzzle-piece project-icon"></i>
+                        <div class="project-badge">VS Code Extension</div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Co-DNA</h3>
+                        <p class="project-desc">
+                            A VS Code Extension built for business enterprise and enhanced cost efficiency. Streamline your workflows and optimize resource usage natively within your editor.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">VS Code API</span>
+                            <span class="tech-tag">TypeScript</span>
+                            <span class="tech-tag">Node.js</span>
+                            <span class="tech-tag">Enterprise</span>
+                        </div>
+                        <div class="project-highlights">
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> Business Enterprise Support</div>
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> Cost Efficiency Optimization</div>
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> Seamless Integration</div>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="#" class="project-link-btn"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="#" class="project-link-btn primary"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i> Live</a>
+                    </div>
+                </div>
+
+                <!-- Project 6: Spam/Ham Detector -->
+                <div class="project-card reveal">
+                    <div class="project-card-header" style="background: linear-gradient(135deg,#fdcb6e,#e17055)">
+                        <i class="fa-solid fa-shield-halved project-icon"></i>
+                        <div class="project-badge">NLP / ML</div>
+                    </div>
+                    <div class="project-card-body">
+                        <h3 class="project-title">Spam/Ham Detector</h3>
+                        <p class="project-desc">
+                            An intelligent Natural Language Processing model that accurately classifies messages as Spam or Ham (legitimate) utilizing TF-IDF transformer techniques.
+                        </p>
+                        <div class="project-tech-stack">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">scikit-learn</span>
+                            <span class="tech-tag">TF-IDF</span>
+                            <span class="tech-tag">NLP</span>
+                        </div>
+                        <div class="project-highlights">
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> High Accuracy Classification</div>
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> Text Vectorization</div>
+                            <div class="highlight-item"><i class="fa-solid fa-check-circle"></i> TF-IDF Transformation</div>
+                        </div>
+                    </div>
+                    <div class="project-card-footer">
+                        <a href="#" class="project-link-btn"><i class="fa-brands fa-github"></i> Code</a>
+                        <a href="#" class="project-link-btn primary"><i
+                                class="fa-solid fa-arrow-up-right-from-square"></i> Demo</a>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -414,6 +497,32 @@
     </footer>
 
     <script src="script.js"></script>
+
+    <!-- ===== MINI GAME BUTTON & MODAL ===== -->
+    <div id="openGame" class="draggable-game-btn" title="Play Mini Game!">
+        <i class="fa-solid fa-gamepad"></i>
+    </div>
+
+    <div id="gameModal" class="game-modal">
+        <div class="game-modal-content">
+            <button id="closeGame" class="close-modal"><i class="fa-solid fa-times"></i></button>
+            <h2 class="section-title" style="font-size: 1.8rem; margin-bottom: 20px;">Click <span class="gradient-text">Counter</span></h2>
+            
+            <button id="startGame" class="btn btn-primary full-width mt-1">Start Game</button>
+            
+            <div id="gameArea" style="display: none; text-align: center;">
+                <div class="game-stats">
+                    <div class="stat"><i class="fa-solid fa-clock"></i> <span id="timeLeft">10</span>s</div>
+                    <div class="stat"><i class="fa-solid fa-star"></i> <span id="score">0</span> pts</div>
+                </div>
+                <button id="clickBtn" class="click-target-btn">
+                    <i class="fa-solid fa-hand-pointer"></i><br/>CLICK ME!
+                </button>
+            </div>
+            
+            <div id="gameResult" style="display: none; text-align: center; margin-top: 20px;"></div>
+        </div>
+    </div>
 
     <script>
         // Three.js Cyberpunk Character Animation

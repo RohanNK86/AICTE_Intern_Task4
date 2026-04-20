@@ -223,3 +223,250 @@ if (contactForm) {
         }
     });
 }
+
+// =============================================
+// PROGRAMMING BACKGROUND ANIMATION
+// =============================================
+function createProgrammingBackground() {
+    const bg = document.getElementById('programming-bg');
+    if (!bg) return;
+
+    const snippets = [
+        ['def predict(model, data):',
+            '    tensor = torch.tensor(data)',
+            '    with torch.no_grad():',
+            '        return model(tensor)',
+            '',
+            'class ChatBot:',
+            '    def __init__(self, api_key):',
+            '        self.gemini = GeminiAPI(api_key)',
+            '    def respond(self, prompt):',
+            '        return self.gemini.generate(prompt)',
+
+            'import requests',
+        '',
+        'API_KEY = "your_api_key_here"',
+        '',
+        'def call_llm(prompt):',
+        '    url = "https://api.openai.com/v1/chat/completions"',
+        '    headers = {',
+        '        "Authorization": f"Bearer {API_KEY}",',
+        '        "Content-Type": "application/json"',
+        '    }',
+        '    data = {',
+        '        "model": "gpt-4o-mini",',
+        '        "messages": [{"role": "user", "content": prompt}]',
+        '    }',
+        '    res = requests.post(url, headers=headers, json=data)',
+        '    return res.json()["choices"][0]["message"]["content"]',
+        '',
+        'def agent():',
+        '    while True:',
+        '        user = input("You: ")',
+        '        if user.lower() == "exit": break',
+        '        print("Agent:", call_llm(user))',
+        '',
+        'agent()'
+        ],
+        ['const analyzeWater = async (levels) => {',
+            '    const model = await tf.loadModel("dwlr.json");',
+            '    const tensor = tf.tensor2d([levels]);',
+            '    const pred = model.predict(tensor);',
+            '    return pred.dataSync();',
+            '};',
+            '',
+            'class ExpenseTracker {',
+            '    save(expense) {',
+            '        const data = JSON.parse(localStorage.getItem("expenses") || "[]");',
+            '        data.push(expense);',
+            '        localStorage.setItem("expenses", JSON.stringify(data));',
+            '    }',
+            '}',
+        ],
+        ['import numpy as np',
+            'from sklearn.ensemble import RandomForestRegressor',
+            '',
+            'X_train, X_test, y_train, y_test = train_test_split(',
+            '    features, labels, test_size=0.2)',
+            'model = RandomForestRegressor(n_estimators=100)',
+            'model.fit(X_train, y_train)',
+            'score = model.score(X_test, y_test)',
+            'print(f"Accuracy: {score:.2f}")',
+        ],
+    ];
+
+    let patIdx = 0, lineIdx = 0, charIdx = 0;
+    const lineHeight = 22, maxLines = 28, typingSpeed = 18;
+
+    function typeCode() {
+        const pattern = snippets[patIdx];
+        if (lineIdx >= pattern.length) {
+            lineIdx = 0; charIdx = 0;
+            bg.innerHTML = '';
+        }
+        if (charIdx === 0) {
+            const div = document.createElement('div');
+            div.style.top = `${(lineIdx % maxLines) * lineHeight}px`;
+            bg.appendChild(div);
+        }
+        const els = bg.getElementsByTagName('div');
+        const cur = els[lineIdx % maxLines];
+        const line = pattern[lineIdx] || '';
+        if (cur) {
+            if (charIdx < line.length) {
+                cur.textContent += line[charIdx];
+                charIdx++;
+            } else {
+                lineIdx++; charIdx = 0;
+            }
+        }
+        if (els.length > maxLines) bg.removeChild(els[0]);
+        setTimeout(typeCode, typingSpeed);
+    }
+
+    typeCode();
+    setInterval(() => {
+        patIdx = (patIdx + 1) % snippets.length;
+        lineIdx = 0; charIdx = 0;
+        bg.innerHTML = '';
+    }, 18000);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    createProgrammingBackground();
+    initMiniGame();
+});
+
+// =============================================
+// MINI GAME — Click Counter
+// =============================================
+function initMiniGame() {
+    const gameModal = document.getElementById('gameModal');
+    const openBtn = document.getElementById('openGame');
+    const closeBtn = document.getElementById('closeGame');
+    const startBtn = document.getElementById('startGame');
+    const gameArea = document.getElementById('gameArea');
+    const clickBtn = document.getElementById('clickBtn');
+    const scoreEl = document.getElementById('score');
+    const timeEl = document.getElementById('timeLeft');
+    const resultEl = document.getElementById('gameResult');
+    if (!gameModal || !openBtn) return;
+
+    let score = 0, timeLeft = 10, gameInterval = null;
+
+    // Draggable Logic
+    let isDragging = false;
+    let MathExt = Math;
+    let dragDist = 0;
+    let startX = 0, startY = 0;
+    let initialLeft = 0, initialTop = 0;
+    
+    openBtn.addEventListener('mousedown', dragStart);
+    document.addEventListener('mousemove', drag);
+    document.addEventListener('mouseup', dragEnd);
+
+    // Touch support for dragging
+    openBtn.addEventListener('touchstart', (e) => {
+        const touch = e.touches[0];
+        dragStart({ clientX: touch.clientX, clientY: touch.clientY });
+    }, {passive: false});
+    document.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        const touch = e.touches[0];
+        drag({ clientX: touch.clientX, clientY: touch.clientY });
+    }, {passive: false});
+    document.addEventListener('touchend', dragEnd);
+
+    function dragStart(e) {
+        isDragging = true;
+        dragDist = 0;
+        startX = e.clientX;
+        startY = e.clientY;
+        const rect = openBtn.getBoundingClientRect();
+        initialLeft = rect.left;
+        initialTop = rect.top;
+        openBtn.style.bottom = 'auto'; // override CSS bottom
+        openBtn.style.right = 'auto';  // override CSS right
+        openBtn.style.transition = 'none'; // disable CSS transition while dragged
+    }
+
+    function drag(e) {
+        if (!isDragging) return;
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+        dragDist += MathExt.abs(dx) + MathExt.abs(dy); // Accumulate physical drag distance
+        openBtn.style.left = `${initialLeft + dx}px`;
+        openBtn.style.top = `${initialTop + dy}px`;
+    }
+
+    function dragEnd() {
+        isDragging = false;
+        openBtn.style.transition = 'transform 0.2s'; // re-add hovering transform
+    }
+
+    // Checking if click or drag
+    openBtn.addEventListener('click', (e) => {
+        if (dragDist > 15) {
+            e.preventDefault(); // It was a drag, don't open modal
+            return;
+        }
+        gameModal.classList.add('open');
+    });
+
+    closeBtn && closeBtn.addEventListener('click', () => { gameModal.classList.remove('open'); resetGame(); });
+    window.addEventListener('click', e => { if (e.target === gameModal) { gameModal.classList.remove('open'); resetGame(); } });
+
+    startBtn && startBtn.addEventListener('click', () => {
+        startBtn.style.display = 'none';
+        gameArea.style.display = 'block';
+        startGame();
+    });
+    
+    clickBtn && clickBtn.addEventListener('click', () => {
+        score++;
+        if (scoreEl) scoreEl.textContent = score;
+        // bump animation
+        clickBtn.style.transform = 'scale(0.85)';
+        setTimeout(() => clickBtn.style.transform = 'scale(1)', 120);
+    });
+
+    function startGame() {
+        score = 0; timeLeft = 10;
+        if (scoreEl) scoreEl.textContent = 0;
+        if (timeEl) timeEl.textContent = 10;
+        if (resultEl) resultEl.style.display = 'none';
+        gameInterval = setInterval(() => {
+            timeLeft--;
+            if (timeEl) timeEl.textContent = timeLeft;
+            if (timeLeft <= 0) endGame();
+        }, 1000);
+    }
+    
+    function endGame() {
+        clearInterval(gameInterval);
+        if (gameArea) gameArea.style.display = 'none';
+        if (resultEl) {
+            resultEl.style.display = 'block';
+            const msg = score >= 60 ? '🏆 Amazing!' : score >= 30 ? '😄 Well done!' : '💪 Keep practicing!';
+            resultEl.innerHTML = `<h3>${msg}</h3><p style="margin: 10px 0; color: var(--text-secondary);">Your score: <strong style="color: var(--text-primary); font-size: 1.5rem;">${score}</strong> pts</p><button class="btn btn-primary mt-1" id="playAgainBtn">Play Again</button>`;
+            
+            document.getElementById('playAgainBtn').addEventListener('click', () => {
+                resetGame();
+                startBtn.style.display = 'none';
+                gameArea.style.display = 'block';
+                startGame();
+            });
+        }
+    }
+    
+    function resetGame() {
+        clearInterval(gameInterval);
+        score = 0; timeLeft = 10;
+        if (gameArea) gameArea.style.display = 'none';
+        if (resultEl) resultEl.style.display = 'none';
+        if (startBtn) startBtn.style.display = '';
+        if (scoreEl) scoreEl.textContent = 0;
+        if (timeEl) timeEl.textContent = 10;
+    }
+}
